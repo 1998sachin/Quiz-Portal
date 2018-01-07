@@ -1,0 +1,301 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #29363f;
+     
+}
+.top{
+        height: 60px;
+        
+        background-color:#dedede; 
+   
+}
+
+.pass{
+     
+    color:  #29363f;
+    padding-top: 10px;
+    padding-right: 40px;
+    float: right;
+   
+}
+
+
+ul li{
+    display: inline;
+   }
+
+.pass input[type="text"],
+.pass input[type="password"]{
+      border: 2px solid  #29363f;
+   border-radius: 5px;
+    outline: none;
+    height: 35px;
+    background: transparent;
+    font-family: 'Quicksand', sans-serif;
+    width: 250px;
+    margin-right: 15px;
+}
+
+.pass input[type="text"]:focus,
+.pass input[type="password"]:focus{
+    
+     border: 2px solid  #29363f;
+    border-radius: 5px;
+    color:  #29363f;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    width: 250px;
+    outline: none;
+    
+}
+
+.pass input[type="text"]:hover,
+.pass input[type="password"]:hover{
+    
+     border: 2px solid  #29363f;
+    border-radius: 5px;
+    color:  #29363f;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    width: 250px;
+    outline: none;
+    
+}
+
+.pass input[placeholder="Student No."],
+.pass input[placeholder="Password"]{
+     
+    font-size: 1.3em;
+    margin-left: 3px;
+    padding-left: 10px;
+    color:  #29363f;
+}
+
+.pass button[type="submit"]{
+    border: 2px solid  #29363f;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    background: transparent;
+    color:  #29363f;
+    width: 130px;
+     font-family: 'Quicksand', sans-serif;
+  
+   
+}
+
+.pass button[type="submit"]:hover{
+     background:  #29363f; 
+    border: none;
+    font-size: 23px;
+    width: 130px;
+    color: white;
+    
+}
+
+
+
+
+
+
+
+.container{
+    float: left;
+   width: 650px;
+    height: 540px;
+    margin-top: 10px;
+    background:transparent;
+    border: 2px solid transparent;
+    opacity: 0.9;
+    margin-left: 70px;
+
+}
+
+ .bdcoe {
+    color: white;
+       padding-top: 0px;
+     font-family: 'Quicksand', sans-serif;
+    font-size: 4em;
+    padding-left: 60px;
+/*      border-top: 1x solid white;
+
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+*/
+     margin-top: 80px;
+    
+}
+ .coe{
+    color: white;
+     font-family: 'Quicksand', sans-serif;
+    font-size:30px;
+     margin-left: 60px;
+     padding: 0;
+}
+
+.logo{
+    float: left;
+    height:80px;
+    width:90px;
+    margin-left: 55px;
+/*
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    
+*/
+    
+}
+#image{
+    
+    height:80px;
+    width: 80px;
+}
+.bd{
+    margin
+}
+.recruit{
+    color: white;
+    padding-top: 90px;
+   margin-left: 10px;
+}
+
+
+
+.login{
+    float: right;
+    width: 40%;
+    height: 540px;
+    margin-top: 60px;
+    margin-right: 20px;;
+    background: transparent;
+    border: 2px solid transparent;
+    opacity: 0.9;
+   
+}
+
+.login .right{
+    float: right;
+    width: 100%;
+    height: 500px;
+    box-sizing: border-box;
+    
+}
+
+.formBox{
+    width: 100%;
+    padding: 0 70px;
+    box-sizing: border-box;
+    height: 500px;
+    background: transparent;
+    margin-top: auto;
+    
+}
+
+
+
+.formBox input{
+    margin-bottom: 17px;
+    width: 90%;
+    outline: none;
+    border: none;
+    
+}
+
+.formBox input[type="text"],
+.formBox input[type="password"],
+.formBox input[type="email"]{
+    border: 2px solid #f1f1f1;
+   border-radius: 5px;
+    outline: none;
+    height: 50px;
+    background: transparent;
+    font-family:  ;
+    width: 350px;
+}
+
+.formBox input[type="text"]:focus,
+.formBox input[type="password"]:focus,
+.formBox input[type="email"]:focus{
+    border: 2px solid #86f0b7;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em;
+    width: 365px;
+    outline: none;
+}
+
+.formBox input[type="text"]:hover,
+.formBox input[type="password"]:hover,
+.formBox input[type="email"]:hover{
+    border: 2px solid #86f0b7;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em;
+    width: 365px;
+    outline: none;
+}
+
+.formBox button[type="submit"]{
+    border: 1PX solid #6ddaa0;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    background: #6ddaa0;
+    height: 45px;
+    cursor: pointer;
+    font-size: 22px;
+     font-family: 'Quicksand', sans-serif;
+    width: 350px;
+}
+
+.formBox button[type="submit"]:hover{
+    background: #5af7a3; 
+    font-size: 23px;
+    width: 365px;
+    background: #90e390;
+    border: none;
+} 
+
+
+
+.formBox input[placeholder="Name"],
+.formBox input[placeholder="Branch"],
+.formBox input[placeholder="Std No."],
+.formBox input[placeholder="Mobile No."],
+.formBox input[placeholder="Password"],
+.formBox input[placeholder="Email@address.com"],
+.formBox input[placeholder="Confirm Password"]{
+    
+    font-size: 1.7em;
+    margin-left: 3px;
+    padding-left: 10px;
+    color: white;
+}
+
+.vr {
+    width:1px;
+    background-color:#fff;
+    position:absolute;
+    left:790px;
+    top: 160px;
+    height: 440px;
+    
+}
+
+.formBox input[type="text"]:valid,
+.formBox input[type="password"]:valid,
+.formBox input[type="email"]:valid{
+  background: url(../images/check.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 320px 10px;  
+    
+    
+}
+
