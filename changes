@@ -1,0 +1,6 @@
+8/01/18
+changes:
+	1.	History of selection button is saved i.e if u select an option and move ahead then if u return back to the same question, ur previously 		selected option is shown.
+	2.	Clear selection is working fine.
+	3.	Solved error of switching between the questions.	
+	
