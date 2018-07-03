@@ -141,45 +141,56 @@
     <div class="modal-content">
       <h4>Register Yourself</h4>
       <p>Register to take part in the test</p>
-      <form>
+      <form action="#" onsubmit="return validation()">
         <div class="input-field">
-          <input type="text" id="name">
-          <label for="name">Name</label>
+          <input type="text" id="name" autocomplete="off">
+          <label for="name">Full Name</label>
+          <span id="username" class="red-text "></span>
         </div>
         <div class="input-field">
-          <input type="text" id="branch">
-          <label for="">Branch</label>
+          <select>
+            <option value="" disabled selected>Select Branch</option>
+            <option value="1">CSE</option>
+            <option value="2">IT</option>
+          </select>
         </div>
         <div class="input-field">
-          <input type="number" id="stdnumber">
+          <input type="text" id="stdnumber" autocomplete="off">
           <label for="stdnumber">Student Number</label>
+          <span id="studentno" class="red-text "></span>
         </div>
         <div class="input-field">
-          <input type="number" id="mobnumber">
-          <label for="mobnumber">Mobile Number</label>
+          <input type="text" id="mobile" autocomplete="off">
+          <label for="mobile">Mobile Number</label>
+          <span id="mobilenumber" class="red-text "></span>
         </div>
         <div class="input-field">
-          <input type="email" id="email">
+          <input type="email" id="email" autocomplete="off">
           <label for="email">Email@address</label>
+          <span id="mail" class="red-text "></span>
         </div>
         <div class="input-field">
-          <input type="password" id="password">
+          <input type="password" id="password" autocomplete="off">
           <label for="password">Password</label>
+          <span id="pass" class="red-text "></span>
         </div>
         <div class="input-field">
-          <input type="password" id="cpassword">
+          <input type="password" id="cpassword" autocomplete="off">
           <label for="cpassword">Confirm Password</label>
+          <span id="confpassword" class="red-text "></span>
+        </div>
+
+        <div class="input-field">
+          <input type="submit" name="submit" value="Submit" class="btn btn-medium waves-effect waves-light white-text green" autocomplete="off">
+          <a href="#" class="modal-action modal-close btn waves-effect waves-light red">
+            <i class="fa fa-times-circle"></i> Close
+          </a>
+
         </div>
       </form>
+
     </div>
-    <div class="modal-footer">
-      <a href="#" class="modal-action modal-close btn grey">
-        <i class="fa fa-sync"></i> Close
-      </a>
-      <a href="#" class="modal-action modal-close btn purple">
-        <i class="fa fa-user"></i> Register
-      </a>
-    </div>
+
   </div>
 
 
@@ -197,16 +208,16 @@
           <input type="password" id="password">
           <label for="password">Password</label>
         </div>
+        <div class="input-field">
+          <input type="submit" name="submit" value="Submit" class="btn btn-medium waves-effect waves-light white-text green" autocomplete="off">
+          <a href="#" class="modal-action modal-close btn waves-effect waves-light red">
+            <i class="fa fa-times-circle"></i> Close
+          </a>
+
+        </div>
       </form>
     </div>
-    <div class="modal-footer">
-      <a href="#" class="modal-action modal-close btn grey">
-        <i class="fa fa-sync"></i> Close
-      </a>
-      <a href="#" class="modal-action modal-close btn purple">
-        <i class="fa fa-user"></i> Register
-      </a>
-    </div>
+
   </div>
 
 
@@ -223,7 +234,92 @@
       $('.button-collapse').sideNav();
       $('.modal').modal();
 
+
+      $('select').material_select()
     });
+  </script>
+  <script type="text/javascript">
+    function validation() {
+
+      var name = document.getElementById('name').value;
+      var stdnumber = document.getElementById('stdnumber').value;
+      var mobile = document.getElementById('mobile').value;
+      var password = document.getElementById('password').value;
+      var email = document.getElementById('email').value;
+      var cpassword = document.getElementById('cpassword').value;
+
+      if (name == "") {
+        document.getElementById('username').innerHTML = "**Please enter Your FullName";
+        return false;
+      }
+      if ((name.length <= 2) || (name.length > 30)) {
+        document.getElementById('username').innerHTML = "** Length of name should be between 2 to 30";
+        return false;
+      }
+      if (!isNaN(name)) {
+        document.getElementById('username').innerHTML = "** Stop Joking, enter your actual name!";
+        return false;
+      }
+
+      if (stdnumber == "") {
+        document.getElementById('studentno').innerHTML = "** Please enter your Student Number";
+        return false;
+      }
+      if (isNaN(stdnumber)) {
+        document.getElementById('studentno').innerHTML = "** Stop Joking, enter your actual Student Number!";
+        return false;
+      }
+      if (stdnumber.length != 7) {
+        document.getElementById('studentno').innerHTML = "**Please enter your correct Student Number";
+        return false;
+      }
+
+      if (mobile == "") {
+        document.getElementById('mobilenumber').innerHTML = "**Please enter Your Mobile Number";
+        return false;
+      }
+      if (isNaN(mobile)) {
+        document.getElementById('mobilenumber').innerHTML = "** Stop Joking, enter your actual Mobile Number Number!";
+        return false;
+      }
+      if (mobile.length != 10) {
+        document.getElementById('mobilenumber').innerHTML = "**Please enter your correct Mobile  Number";
+        return false;
+      }
+
+      if (email == "") {
+        document.getElementById('mail').innerHTML = "**Please enter Your Email@address";
+        return false;
+      }
+      if (email.indexOf('@') <= 0) {
+        document.getElementById('mail').innerHTML = "**Enter valid Email Id";
+        return false;
+      }
+      if ((email.charAt(email.length - 4) != '.') && (email.charAt(email.length - 3) != '.')) {
+        document.getElementById('mail').innerHTML = "**Enter your correct email address!";
+        return false;
+      }
+      if (password == "") {
+        document.getElementById('pass').innerHTML = "**Please enter a password";
+        return false;
+      }
+      if ((password.length <= 4) || (password.length > 20)) {
+        document.getElementById('pass').innerHTML = "**Password should be between 5 to 20 characters long";
+        return false;
+      }
+
+      if (pass != cpassword) {
+        document.getElementById('confpassword').innerHTML = "**Password do not match!";
+        return false;
+      }
+
+      if (cpassword == "") {
+        document.getElementById('confpassword').innerHTML = "**Please enter password once again";
+        return false;
+      }
+
+    }
+
   </script>
 </body>
 
